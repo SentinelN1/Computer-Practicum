@@ -93,7 +93,7 @@ public:
     }
 };
 
-class TurnOff : public Command
+class TurnOff : public Command 
 {
 public:
     TurnOff(Lamp *lamp)
