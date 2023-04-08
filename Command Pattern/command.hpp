@@ -23,6 +23,9 @@ public:
 
 class Command
 {
+protected:
+    Lamp *lamp_;
+
 public:
     virtual ~Command() = default;
     virtual void Execute() const = 0;
@@ -31,9 +34,6 @@ public:
 
 class TurnOn : public Command
 {
-private:
-    Lamp *lamp_;
-
 public:
     TurnOn(Lamp *lamp)
     {
@@ -55,9 +55,6 @@ public:
 
 class MakeBrighter : public Command
 {
-private:
-    Lamp *lamp_;
-
 public:
     MakeBrighter(Lamp *lamp)
     {
@@ -98,9 +95,6 @@ public:
 
 class TurnOff : public Command
 {
-private:
-    Lamp *lamp_;
-
 public:
     TurnOff(Lamp *lamp)
     {

@@ -7,8 +7,8 @@ int main()
 
     invoker->DoCommand(new TurnOn(lamp));
     invoker->DoCommand(new MakeBrighter(lamp));
-    invoker->Redo();
-    invoker->Undo();
+    invoker->Redo(); // Make brighter
+    invoker->Undo(); // Make brighter
     invoker->DoCommand(new TurnOff(lamp));
 
     if (invoker)
